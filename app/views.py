@@ -40,6 +40,6 @@ def insert_access(request):
         WO=Webpage.objects.get(Name=Name)
         AO=AccessRecord.objects.get_or_create(Name=WO,author=author,date=date)[0]
         AO.save()
-        return HttpResponse('Webpage insertion is done Successfully')
+        return HttpResponse('AccessRecord insertion is done Successfully')
 
     return render(request,'insert_access.html',d)
